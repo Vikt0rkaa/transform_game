@@ -9,7 +9,7 @@ constexpr int TILE = 48;  // pixels per tile
 constexpr int WIN_W = COLS * TILE;  
 constexpr int WIN_H = ROWS * TILE; 
 
-// tile types 
+// different tile types int the game w their description 
 enum class Tile {
     Empty,    // walkable floor
     Wall,     // solid wall
