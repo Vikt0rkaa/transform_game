@@ -20,6 +20,8 @@ void Game::loadAudio() {
         pushSound.setBuffer(pushBuf);
     if (winBuf.loadFromFile("assets/win.wav"))
         winSound.setBuffer(winBuf);
+    if (starBuf.loadFromFile("assets/star.wav"))
+        starSound.setBuffer(starBuf);
 
     switchSound.setVolume(75.0f);
     pushSound.setVolume(65.0f);
@@ -205,7 +207,7 @@ void Game::drawHUD() {
         score.setPosition(WIN_W / 2.0f - score.getLocalBounds().width / 2.0f, WIN_H / 2.0f + 50.0f);
         window.draw(score);
 
-        sf::Text sub("R to play again", font, 16);
+        sf::Text sub("R to play again | Escape to quit", font, 16);
         sub.setFillColor(sf::Color(140, 140, 160));
         sub.setPosition(WIN_W / 2.0f - sub.getLocalBounds().width / 2.0f, WIN_H / 2.0f + 86.0f);
         window.draw(sub);
